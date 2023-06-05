@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${inter.className} ${phonk.variable}`}>
         <Header />
-        <div className='pt-22 lg:pt-32'>{children}</div>
+        <div className='pt-22 xl:pt-32'>{children}</div>
         <Footer />
       </body>
     </html>

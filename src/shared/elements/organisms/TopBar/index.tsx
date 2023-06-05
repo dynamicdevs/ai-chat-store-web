@@ -27,7 +27,7 @@ const Item = ({ text, icon, className, onClick }: ItemProps) => {
 export const TopBar = () => {
   return (
     <>
-      <GridWrapper className='hidden h-10 bg-core-interactive-100 lg:block'>
+      <GridWrapper className='hidden h-10 bg-core-interactive-100 xl:block'>
         <div className='flex justify-between col-span-full'>
           <div className='flex items-center'>
             <Item text='Seguros' className='pr-6' />

@@ -23,13 +23,13 @@
 
 .swiper-pagination {
   @apply whitespace-nowrap;
-  @apply relative bottom-0 #{!important};
 
   .swiper-pagination-bullet {
     @apply w-2 h-2 rounded-full cursor-pointer outline-none relative opacity-100;
   }
 }
 
-.swiper-pagination-hero {
+.swiper-pagination-hero,
+.swiper-pagination-product {
   @include bullet-primary();
 }

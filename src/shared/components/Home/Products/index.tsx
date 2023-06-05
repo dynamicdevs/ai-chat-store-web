@@ -7,7 +7,7 @@ import {
 
 export const Products = () => {
   return (
-    <GridWrapper notVerticalGap>
+    <GridWrapper notVerticalGap className='pt-14'>
       <div className='py-10 col-span-full'>
         <div className='flex items-center justify-between mb-8'>
           <h3 className='font-bold text-headline-01 lg:text-display-04'>

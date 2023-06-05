@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const CarouselHero = () => {
   return (
-    <>
+    <div className='relative'>
       <div className='relative flex items-center justify-center'>
         <Swiper
           slidesPerView={1}
@@ -17,12 +17,11 @@ export const CarouselHero = () => {
             el: '.swiper-pagination-hero',
           }}
           modules={[Pagination]}
-          className='!pb-4'
         >
           {[1, 2, 3, 4, 5].map(_ => (
             <SwiperSlide
               key={_}
-              className='!flex !justify-center relative !h-[725px] lg:!h-[436px]'
+              className='!flex !justify-center relative !h-[725px] lg:!h-[360px] xl:!h-[436px]'
             >
               <Image
                 src='/images/slide-01-mobile.png'
@@ -34,13 +33,13 @@ export const CarouselHero = () => {
                 src='/images/slide-01-desktop.png'
                 alt='Image slide'
                 fill
-                className='hidden object-contain lg:block'
+                className='hidden object-contain object-bottom lg:block'
               />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-      <div className='swiper-pagination swiper-pagination-hero'></div>
-    </>
+      <div className='!absolute !-bottom-12 swiper-pagination swiper-pagination-hero'></div>
+    </div>
   );
 };

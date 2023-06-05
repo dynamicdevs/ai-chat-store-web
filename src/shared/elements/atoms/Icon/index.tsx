@@ -12,6 +12,14 @@ import Phone from './icons/ic_phone.svg';
 import Card from './icons/ic_card.svg';
 import Info from './icons/ic_info.svg';
 import Truck from './icons/ic_truck.svg';
+import Share from './icons/ic_share.svg';
+import Shield from './icons/ic_shield.svg';
+import CardOutline from './icons/ic_card_outline.svg';
+import TruckOutline from './icons/ic_truck_outline.svg';
+import Shop from './icons/ic_shop.svg';
+import Chevron from './icons/ic_chevron.svg';
+import Minus from './icons/ic_minus.svg';
+import Plus from './icons/ic_plus.svg';
 
 export const iconTypes = {
   logo: {
@@ -69,6 +77,38 @@ export const iconTypes = {
   ic_truck: {
     component: Truck,
     alt: 'Truck',
+  },
+  ic_share: {
+    component: Share,
+    alt: 'Share',
+  },
+  ic_shield: {
+    component: Shield,
+    alt: 'Shield',
+  },
+  ic_card_outline: {
+    component: CardOutline,
+    alt: 'Card Outline',
+  },
+  ic_truck_outline: {
+    component: TruckOutline,
+    alt: 'Truck Outline',
+  },
+  ic_shop: {
+    component: Shop,
+    alt: 'Shop',
+  },
+  ic_chevron: {
+    component: Chevron,
+    alt: 'Chevron',
+  },
+  ic_minus: {
+    component: Minus,
+    alt: 'Minus',
+  },
+  ic_plus: {
+    component: Plus,
+    alt: 'Plus',
   },
 };
 

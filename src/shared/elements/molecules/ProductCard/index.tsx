@@ -12,7 +12,7 @@ export const ProductCard = ({ product }: Props) => {
     <div className='flex flex-col gap-3'>
       <div className='bg-core-component relative rounded-lg w-full h-[233.33px] hover:bg-[#F7F7F7] hover:shadow-02 lg:h-[266.67px]'>
         <Image
-          src={product.photo}
+          src={product.photos[0]}
           alt={product.name}
           fill
           className='object-contain'
