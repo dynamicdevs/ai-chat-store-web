@@ -1,0 +1,14 @@
+.content-grid {
+  @apply 
+  h-full
+  max-w-[1320px]
+  grid
+  grid-cols-6
+  gap-2
+  px-4
+  md:px-8
+  md:grid-cols-10
+  lg:grid-cols-12
+  lg:mx-auto
+  xl:px-0;
+}

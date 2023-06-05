@@ -1,7 +1,20 @@
 import '../styles/index.scss';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/bundle';
+
 import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
+
+import { Footer, Header } from '@/elements/organisms';
 
 const inter = Inter({ subsets: ['latin'] });
+const phonk = localFont({
+  src: '../../public/fonts/phonk.woff2',
+  display: 'swap',
+  variable: '--font-phonk',
+});
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +28,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${phonk.variable}`}>
+        <Header />
+        <div className='pt-22 lg:pt-32'>{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }

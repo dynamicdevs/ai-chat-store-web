@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "./grid";
+@import "./button";
+@import "./icon";
+@import "./swiper";
+@import "./form";
+
+@layer base {
+  * {
+    @apply text-core-default-content;
+  }
+}
+
+@layer utilities {
+  .banner-back-sm {
+    background-image: url('../../public/images/blobs-bg-mobile.png');
+  }
+
+  .banner-back-md {
+    background-image: url('../../public/images/blobs-bg-desktop.png');
+  }
+}
+
+.banner-back {
+  @apply bg-center bg-no-repeat bg-[length:100%] banner-back-sm after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-banner-mobile after:rounded-3xl lg:banner-back-md lg:bg-[length:100%_100%] lg:after:w-1/2 lg:after:bg-banner-desktop;
+}

@@ -1,0 +1,35 @@
+@mixin swiper-navigation {
+  @apply justify-center items-center w-10 h-10 rounded-full cursor-pointer absolute top-1/2 -translate-y-1/2 z-[2] bg-transparency-black-300;
+}
+
+@mixin bullet-primary {
+  .swiper-pagination-bullet {
+    @apply bg-core-disabled my-0 mx-3 #{!important};
+
+    &.swiper-pagination-bullet-active {
+      @apply bg-core-interactive-100 w-2 h-2 #{!important};
+    }
+  }
+}
+
+.swiper {
+  @apply w-full h-full;
+}
+
+.swiper-prev-custom,
+.swiper-next-custom {
+  @include swiper-navigation();
+}
+
+.swiper-pagination {
+  @apply whitespace-nowrap;
+  @apply relative bottom-0 #{!important};
+
+  .swiper-pagination-bullet {
+    @apply w-2 h-2 rounded-full cursor-pointer outline-none relative opacity-100;
+  }
+}
+
+.swiper-pagination-hero {
+  @include bullet-primary();
+}

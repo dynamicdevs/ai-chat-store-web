@@ -1,3 +1,11 @@
+import { Banner, Hero, Products } from '@/components/Home';
+
 export default function Home() {
-  return <div>Home Page</div>;
+  return (
+    <>
+      <Hero />
+      <Products />
+      <Banner />
+    </>
+  );
 }
