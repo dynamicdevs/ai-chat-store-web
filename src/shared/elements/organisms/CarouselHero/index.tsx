@@ -21,7 +21,7 @@ export const CarouselHero = () => {
           {[1, 2, 3, 4, 5].map(_ => (
             <SwiperSlide
               key={_}
-              className='!flex !justify-center relative !h-[725px] lg:!h-[360px] xl:!h-[436px]'
+              className='!flex !justify-center relative !h-[725px] lg:!h-[311px] xl:!h-[436px]'
             >
               <Image
                 src='/images/slide-01-mobile.png'
@@ -39,7 +39,7 @@ export const CarouselHero = () => {
           ))}
         </Swiper>
       </div>
-      <div className='!absolute !-bottom-12 swiper-pagination swiper-pagination-hero'></div>
+      <div className='!absolute !-bottom-9 swiper-pagination swiper-pagination-hero md:!-bottom-12'></div>
     </div>
   );
 };

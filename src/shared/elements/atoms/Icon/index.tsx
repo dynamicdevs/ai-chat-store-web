@@ -20,6 +20,7 @@ import Shop from './icons/ic_shop.svg';
 import Chevron from './icons/ic_chevron.svg';
 import Minus from './icons/ic_minus.svg';
 import Plus from './icons/ic_plus.svg';
+import Bubble from './icons/ic_bubble.svg';
 
 export const iconTypes = {
   logo: {
@@ -109,6 +110,10 @@ export const iconTypes = {
   ic_plus: {
     component: Plus,
     alt: 'Plus',
+  },
+  ic_bubble: {
+    component: Bubble,
+    alt: 'Bubble',
   },
 };
 

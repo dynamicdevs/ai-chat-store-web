@@ -1,4 +1,4 @@
-import { CarouselProduct, GridWrapper } from '@/elements/organisms';
+import { CarouselProduct } from '@/elements/organisms';
 import { type Product } from '@/interfaces';
 
 type Props = {
@@ -7,10 +7,8 @@ type Props = {
 
 export const Hero = ({ product }: Props) => {
   return (
-    <GridWrapper notVerticalGap className='pt-4 bg-core-default-inverted'>
-      <div className='col-span-full'>
-        <CarouselProduct product={product} />
-      </div>
-    </GridWrapper>
+    <div className='col-span-full lg:col-span-6'>
+      <CarouselProduct product={product} />
+    </div>
   );
 };

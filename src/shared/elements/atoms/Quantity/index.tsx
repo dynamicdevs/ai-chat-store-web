@@ -4,10 +4,11 @@ import { type ChangeEvent, useState } from 'react';
 import { IconComponent as Icon } from '../Icon';
 
 type Props = {
+  className?: string;
   onChange: (e: number) => void;
 };
 
-export const Quantity = ({ onChange }: Props) => {
+export const Quantity = ({ className, onChange }: Props) => {
   const [value, setValue] = useState<number>(1);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -16,7 +17,9 @@ export const Quantity = ({ onChange }: Props) => {
   };
 
   return (
-    <div className='relative flex items-center justify-center h-11 border border-core-subtle rounded-[35px] bg-core-default-inverted'>
+    <div
+      className={`relative flex items-center justify-center h-11 border border-core-subtle rounded-[35px] bg-core-default-inverted md:h-14 ${className}`}
+    >
       <Icon
         name='ic_minus'
         className={`absolute cursor-pointer icon-color-inherit left-3 ${
@@ -43,7 +46,7 @@ export const Quantity = ({ onChange }: Props) => {
             setValue(1);
           }
         }}
-        className='text-center outline-none'
+        className='w-full font-medium text-center border-none rounded-full outline-none text-button-01'
       />
     </div>
   );

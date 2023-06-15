@@ -1,0 +1,25 @@
+@layer utilities {
+  .pill-sm {
+    @apply h-9 border text-button-02 font-medium rounded-full px-3 transition-all delay-100 ease-in;
+  }
+
+  .pill-md {
+    @apply h-11 border text-button-01 font-medium rounded-full px-4 transition-all delay-100 ease-in;
+  }
+
+  .pill-lg {
+    @apply h-14 border text-button-01 font-medium rounded-full px-5 transition-all delay-100 ease-in;
+  }
+}
+
+.pill-primary {
+  @apply bg-core-interactive-100 text-core-default-inverted border-core-interactive-100 hover:bg-core-interactive-200;
+}
+
+.pill-primary-outlined {
+  @apply bg-transparent text-core-interactive-100 border-core-interactive-100 hover:text-core-interactive-200 hover:border-core-interactive-200;
+}
+
+.pill-inverted {
+  @apply text-core-interactive-100 bg-core-default-inverted border-core-default-inverted hover:text-core-interactive-200;
+}

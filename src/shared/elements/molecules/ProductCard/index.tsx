@@ -1,15 +1,24 @@
+'use client';
+
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+
 import { ProductType } from '@/enums';
 import { type Product } from '@/interfaces';
 import { currencyFormat } from '@/utils';
-import Image from 'next/image';
 
 type Props = {
   product: Product;
 };
 
 export const ProductCard = ({ product }: Props) => {
+  const router = useRouter();
+
   return (
-    <div className='flex flex-col gap-3'>
+    <div
+      className='flex flex-col gap-3'
+      onClick={async () => router.replace(`${product.id}`)}
+    >
       <div className='bg-core-component relative rounded-lg w-full h-[233.33px] hover:bg-[#F7F7F7] hover:shadow-02 lg:h-[266.67px]'>
         <Image
           src={product.photos[0]}

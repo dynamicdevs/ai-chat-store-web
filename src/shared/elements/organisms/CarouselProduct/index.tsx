@@ -33,14 +33,16 @@ export const CarouselProduct = ({ product }: Props) => {
           {product.photos.map((_, i) => (
             <SwiperSlide
               key={`product-${i}`}
-              className='w-full !h-[358px] rounded-lg bg-core-component'
+              className='!flex !justify-center w-full'
             >
-              <Image
-                src={_}
-                alt='Product Image'
-                fill
-                className='object-contain'
-              />
+              <div className='relative w-full !h-[358px] md:!w-[454px] md:!h-[452px] rounded-lg bg-core-component lg:!w-full lg:!h-[494px] xl:!h-[692px]'>
+                <Image
+                  src={_}
+                  alt='Product Image'
+                  fill
+                  className='object-contain'
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

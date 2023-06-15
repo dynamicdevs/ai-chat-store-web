@@ -20,14 +20,14 @@ export const CarouselProducts = ({ id, products }: Props) => {
   return (
     <div className='relative flex items-center justify-center'>
       <div
-        className={`hidden swiper-next-custom -right-5 swiper-next-products-${id} md:!flex ${
+        className={`hidden swiper-next-custom -right-5 swiper-next-products-${id} lg:!flex ${
           showNext ? 'visible' : 'invisible'
         }`}
       >
         <Icon name='ic_arrow_right' />
       </div>
       <div
-        className={`hidden swiper-prev-custom -left-5 swiper-prev-products-${id} md:!flex ${
+        className={`hidden swiper-prev-custom -left-5 swiper-prev-products-${id} lg:!flex ${
           showPrev ? 'visible' : 'invisible'
         }`}
       >
@@ -46,11 +46,12 @@ export const CarouselProducts = ({ id, products }: Props) => {
             slidesPerView: 2,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 4,
+            spaceBetween: 16,
           },
           1024: {
             slidesPerView: 5,
-            spaceBetween: 20,
+            spaceBetween: 16,
           },
           1440: {
             slidesPerView: 6,

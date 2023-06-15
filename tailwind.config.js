@@ -15,9 +15,19 @@ module.exports = {
       spacing: {
         15: '3.75rem',
         17: '4.25rem',
+        19: '4.75rem',
+        21: '5.25rem',
         22: '5.5rem',
+        30: '7.5rem',
+        31: '7.75rem',
         32: '8rem',
+        35: '8.75rem',
         50: '12.5rem',
+      },
+      minWidth: {
+        30: '7.5rem',
+        35: '8.75rem',
+        45: '11.25rem',
       },
     },
     fontSize: {
@@ -176,6 +186,7 @@ module.exports = {
     boxShadow: {
       '01': '0px 4px 15px rgba(0, 0, 0, 0.1)',
       '02': '0px 5px 20px rgba(0, 0, 0, 0.25)',
+      '03': '0px 4px 20px rgba(0, 0, 0, 0.25)',
     },
     container: () => ({
       center: true,

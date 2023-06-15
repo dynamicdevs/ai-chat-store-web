@@ -1,8 +1,11 @@
+'use client';
+
 import Link from 'next/link';
 
 import { IconComponent as Icon } from '@/elements/atoms';
 import { FormSubscribe } from '@/elements/molecules';
 import { GridWrapper } from '../GridWrapper';
+import { usePathname } from 'next/navigation';
 
 type ItemProps = {
   href: string;
@@ -21,6 +24,8 @@ const Item = ({ href, text }: ItemProps) => {
 };
 
 export const Footer = () => {
+  const pathname = usePathname();
+
   return (
     <>
       <GridWrapper
@@ -111,12 +116,16 @@ export const Footer = () => {
           </ul>
         </div>
 
-        <div className='col-span-full lg:col-span-3'>
+        <div className='col-span-full md:col-span-4 lg:col-span-3'>
           <FormSubscribe />
         </div>
       </GridWrapper>
 
-      <GridWrapper className='py-10 bg-core-secondary-dark'>
+      <GridWrapper
+        className={`pt-10 bg-core-secondary-dark md:!pt-10 ${
+          pathname === '/' ? 'pb-10' : 'pb-30'
+        }`}
+      >
         <div className='flex flex-col col-span-full lg:flex-row lg:gap-6 lg:items-center'>
           <div className='flex items-center justify-center gap-6 mb-6 lg:mb-0'>
             <a
