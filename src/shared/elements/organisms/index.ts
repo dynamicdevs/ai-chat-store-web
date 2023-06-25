@@ -5,3 +5,4 @@ export * from './CarouselProducts';
 export * from './Footer';
 export * from './TopBar';
 export * from './CarouselProduct';
+export * from './ChatContent';

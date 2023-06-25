@@ -182,11 +182,13 @@ module.exports = {
       'gradient-pink': 'linear-gradient(180deg, #f40092 0%, #951f33 100%)',
       'banner-mobile': 'linear-gradient(179.73deg, rgba(0, 0, 0, 0.79) 0.23%, rgba(0, 0, 0, 0) 99.76%)',
       'banner-desktop': 'linear-gradient(90.05deg, rgba(0, 0, 0, 0.79) 0.04%, rgba(0, 0, 0, 0) 99.96%)',
+      'opacity-card': 'linear-gradient(270deg, #FFF 13.54%, rgba(255, 255, 255, 0.00) 100%)'
     },
     boxShadow: {
       '01': '0px 4px 15px rgba(0, 0, 0, 0.1)',
       '02': '0px 5px 20px rgba(0, 0, 0, 0.25)',
       '03': '0px 4px 20px rgba(0, 0, 0, 0.25)',
+      '04': '0px 4px 20px 0px rgba(0, 0, 0, 0.25)',
     },
     container: () => ({
       center: true,

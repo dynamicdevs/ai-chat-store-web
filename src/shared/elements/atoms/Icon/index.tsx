@@ -21,11 +21,18 @@ import Chevron from './Icons/ic_chevron.svg';
 import Minus from './Icons/ic_minus.svg';
 import Plus from './Icons/ic_plus.svg';
 import Bubble from './Icons/ic_bubble.svg';
+import MiniLogo from './Icons/mini_logo.svg';
+import Exit from './Icons/ic_exit.svg';
+import Send from './Icons/ic_send.svg';
 
 export const iconTypes = {
   logo: {
     component: Logo,
     alt: 'Logo',
+  },
+  mini_logo: {
+    component: MiniLogo,
+    alt: 'MiniLogo',
   },
   ic_cart: {
     component: Cart,
@@ -114,6 +121,14 @@ export const iconTypes = {
   ic_bubble: {
     component: Bubble,
     alt: 'Bubble',
+  },
+  ic_exit: {
+    component: Exit,
+    alt: 'Exit',
+  },
+  ic_send: {
+    component: Send,
+    alt: 'Send',
   },
 };
 

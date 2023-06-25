@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { IconComponent as Icon } from '@/elements/atoms';
 import { type Product } from '@/interfaces';
 import { ProductCard } from '@/elements/molecules';
+import { useBreakpoint } from '@/hooks';
 
 type Props = {
   id: string;
@@ -16,6 +17,10 @@ type Props = {
 export const CarouselProducts = ({ id, products }: Props) => {
   const [showPrev, setShowPrev] = useState<boolean>(false);
   const [showNext, setShowNext] = useState<boolean>(true);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const isLg = useBreakpoint('lg');
+  const isXl = useBreakpoint('xl');
 
   return (
     <div className='relative flex items-center justify-center'>
@@ -67,11 +72,20 @@ export const CarouselProducts = ({ id, products }: Props) => {
         onSlideChange={e => {
           setShowNext(!e.isEnd);
           setShowPrev(e.activeIndex > 0);
+          setCurrentIndex(e.activeIndex);
         }}
       >
-        {products.map(_ => (
+        {products.map((_, i) => (
           <SwiperSlide key={_.id}>
-            <ProductCard product={_} />
+            <ProductCard
+              product={_}
+              className={
+                (isLg && !isXl && currentIndex + 4 === i) ||
+                (isXl && currentIndex + 5 === i)
+                  ? 'after:bg-opacity-card after:absolute after:h-full after:w-full after:left-0 after:top-0'
+                  : ''
+              }
+            />
           </SwiperSlide>
         ))}
       </Swiper>

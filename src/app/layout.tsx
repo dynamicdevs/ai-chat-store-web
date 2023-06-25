@@ -7,7 +7,7 @@ import 'swiper/css/bundle';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 
-import { Footer, Header } from '@/elements/organisms';
+import { ChatContent, Footer, Header } from '@/elements/organisms';
 
 const inter = Inter({ subsets: ['latin'] });
 const phonk = localFont({
@@ -32,6 +32,7 @@ export default function RootLayout({
         <Header />
         <div className='pt-22 xl:pt-32'>{children}</div>
         <Footer />
+        <ChatContent />
       </body>
     </html>
   );

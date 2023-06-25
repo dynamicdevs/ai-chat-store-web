@@ -8,6 +8,7 @@
 @import "./swiper";
 @import "./form";
 @import "./pill";
+@import "./loading";
 
 @layer base {
   * {
@@ -27,4 +28,25 @@
 
 .banner-back {
   @apply bg-center bg-no-repeat bg-[length:100%] banner-back-sm after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-banner-mobile after:rounded-3xl lg:banner-back-md lg:bg-[length:100%_100%] lg:after:w-1/2 lg:after:bg-banner-desktop;
+}
+
+.bg-chat {
+  background-image: url('../../public/images/bg-chat.png');
+  @apply bg-center bg-no-repeat bg-[length:100%] bg-[#ED1556] bg-opacity-5;
+}
+
+.scroll-primary {
+  &::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply rounded-[38px];
+    @apply bg-core-grey-100;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-[38px];
+    @apply bg-core-interactive-100;
+  }
 }

@@ -1,0 +1,33 @@
+.loading {
+  @apply w-2 h-2 rounded-full relative bg-transparency-black-300 text-transparency-black-300;
+  animation: dot-flashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+
+.loading::before, .loading::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.loading::before {
+  @apply w-2 h-2 rounded-full bg-transparency-black-300 text-transparency-black-300 -left-5;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.loading::after {
+  @apply w-2 h-2 rounded-full bg-transparency-black-300 text-transparency-black-300 left-5;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    @apply bg-transparency-black-300;
+  }
+  50%, 100% {
+    @apply bg-transparency-black-100;
+  }
+}

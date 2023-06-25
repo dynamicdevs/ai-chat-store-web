@@ -9,14 +9,15 @@ import { currencyFormat } from '@/utils';
 
 type Props = {
   product: Product;
+  className?: string;
 };
 
-export const ProductCard = ({ product }: Props) => {
+export const ProductCard = ({ product, className }: Props) => {
   const router = useRouter();
 
   return (
     <div
-      className='flex flex-col gap-3'
+      className={`relative flex flex-col gap-3 ${className}`}
       onClick={async () => router.replace(`${product.id}`)}
     >
       <div className='bg-core-component relative rounded-lg w-full h-[233.33px] hover:bg-[#F7F7F7] hover:shadow-02 lg:h-[266.67px]'>
