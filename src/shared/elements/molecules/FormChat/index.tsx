@@ -27,6 +27,11 @@ export const FormChat = ({ onSend }: Props) => {
         value={value}
         className='w-full px-3 py-2 border rounded-full h-9 outline-none bg-core-default-inverted border-core-subtle text-body-02 max-h-[58px] overflow-auto xl:min-h-[44px] resize-none'
         onChange={e => setValue(e.target.value)}
+        onKeyUp={e => {
+          if (e.key === 'Enter') {
+            handleSubmit();
+          }
+        }}
       ></textarea>
       <button
         type='button'
