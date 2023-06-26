@@ -31,7 +31,7 @@ const Header = ({ onClose }: Props) => {
           <p className='text-body-01 md:text-body-03 xl:text-body-01'>Abcdin</p>
         </div>
       </div>
-      <Icon name='ic_exit' onClick={onClose} />
+      <Icon name='ic_exit' className='cursor-pointer' onClick={onClose} />
     </div>
   );
 };
@@ -48,13 +48,6 @@ export const ChatContent = () => {
   const { useSendMessage, useSendMessageForProduct } = useMessageService();
 
   useEffect(() => {
-    if (listMessage.length > 10) {
-      listMessage.shift();
-      setListMessage([...listMessage]);
-    }
-  }, [listMessage]);
-
-  useEffect(() => {
     setListMessage([DEFAULT_MESSAGE]);
     setLoading(false);
   }, [pathname]);
@@ -65,17 +58,19 @@ export const ChatContent = () => {
       content: newMessage,
     };
 
-    setListMessage([...listMessage, item]);
+    const newList = [...listMessage, item];
+    setListMessage(newList);
     scrollContentBottom();
     setLoading(true);
 
     try {
+      const limitMessages = newList.length > 0 ? newList.slice(-10) : newList;
       const fetch =
         pathname === '/'
-          ? useSendMessage([...listMessage, item])
-          : useSendMessageForProduct([...listMessage, item], '1176074');
+          ? useSendMessage(limitMessages)
+          : useSendMessageForProduct(limitMessages, '1176074');
       const { data } = await fetch;
-      setListMessage([...listMessage, data[data.length]]);
+      setListMessage([...newList, data[data.length - 1]]);
       scrollContentBottom();
       setLoading(false);
     } catch (e: any) {
@@ -94,7 +89,7 @@ export const ChatContent = () => {
   return (
     <>
       <div
-        className='fixed z-30 bottom-4 right-4 flex items-center justify-center w-[74px] h-[74px] shadow-04 gap-3 rounded-full bg-core-interactive-100 md:w-fit md:px-[26px] md:bottom-10 md:right-10'
+        className='fixed z-30 bottom-4 right-4 flex items-center justify-center w-[74px] cursor-pointer h-[74px] shadow-04 gap-3 rounded-full bg-core-interactive-100 md:w-fit md:px-[26px] md:bottom-10 md:right-10'
         onClick={() => {
           setOpen(true);
           if (!isXl) {
