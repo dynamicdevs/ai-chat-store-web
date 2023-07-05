@@ -18,7 +18,7 @@ export const ProductCard = ({ product, className }: Props) => {
   return (
     <div
       className={`relative flex flex-col gap-3 ${className}`}
-      onClick={async () => router.replace(`${product.id}`)}
+      onClick={async () => router.replace(`${product.slug}`)}
     >
       <div className='bg-core-component relative rounded-lg w-full h-[233.33px] hover:bg-[#F7F7F7] hover:shadow-02 lg:h-[266.67px]'>
         <Image

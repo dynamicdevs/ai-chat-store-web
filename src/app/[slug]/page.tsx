@@ -5,7 +5,7 @@ import { type Product } from '@/interfaces';
 
 export default function DetailProduct({ params }: any) {
   const product = PRODUCT_LIST_01.find(
-    _ => _.id === Number(params.slug)
+    _ => _.slug === String(params.slug)
   ) as Product;
 
   return (

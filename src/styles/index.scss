@@ -50,3 +50,7 @@
     @apply bg-core-interactive-100;
   }
 }
+
+.link {
+  @apply cursor-pointer underline underline-offset-4 text-[blue];
+}

@@ -5,6 +5,7 @@ export const PRODUCT_LIST_01: Product[] = [
   {
     id: 1,
     name: 'Apple Watch Ultra',
+    slug: 'apple-watch-ultra',
     description: 'Titanium Case Orange Loop',
     descriptionLong: '',
     price: 637.672,
@@ -16,6 +17,7 @@ export const PRODUCT_LIST_01: Product[] = [
   {
     id: 2,
     name: 'iPhone 14 Pro',
+    slug: 'iphone-14-pro-purple',
     description: 'Color Deep Purple 128GB',
     descriptionLong:
       'El iPhone 14 Pro Deep Purple es un teléfono inteligente de última generación con un diseño elegante y sofisticado. Cuenta con una pantalla Super Retina XDR de 6.7 pulgadas y un potente chip A16 Bionic para un rendimiento excepcional. Su cámara triple de 12 megapíxeles captura imágenes de calidad profesional y ofrece funciones de seguridad como el reconocimiento facial Face ID. Con resistencia al agua y al polvo IP68, es un dispositivo confiable en todas las situaciones. Además, su cuerpo de vidrio y metal brinda una sensación premium en la mano.',
@@ -33,6 +35,7 @@ export const PRODUCT_LIST_01: Product[] = [
   },
   {
     id: 3,
+    slug: 'iphone-14-pro-gold',
     name: 'iPhone 14 Pro',
     description: 'Color Gold 128GB',
     descriptionLong: '',
@@ -45,6 +48,7 @@ export const PRODUCT_LIST_01: Product[] = [
   {
     id: 4,
     name: 'Galaxy Z Flip4',
+    slug: 'galaxy-z-flip4',
     description: 'Color Bora Purple 128GB',
     descriptionLong: '',
     price: 797.09,
@@ -56,6 +60,7 @@ export const PRODUCT_LIST_01: Product[] = [
   {
     id: 5,
     name: 'iPhone 14 Pro Max',
+    slug: 'iphone-14-pro-max-gold',
     description: 'Color Gold 128GB',
     descriptionLong: '',
     price: 1800.862,
@@ -67,6 +72,7 @@ export const PRODUCT_LIST_01: Product[] = [
   {
     id: 6,
     name: 'iPhone 14 Pro Max',
+    slug: 'iphone-14-pro-gold-purple',
     description: 'Color Deep Purple 128GB',
     descriptionLong: '',
     price: 1800.862,
@@ -78,6 +84,7 @@ export const PRODUCT_LIST_01: Product[] = [
   {
     id: 7,
     name: 'iPhone 14 Pro Max',
+    slug: 'iphone-14-pro-max-purple-2',
     description: 'Color Deep Purple 128GB',
     descriptionLong: '',
     price: 1800.862,
@@ -89,6 +96,7 @@ export const PRODUCT_LIST_01: Product[] = [
   {
     id: 8,
     name: 'iPhone 14 Pro Max',
+    slug: 'iphone-14-pro-max-purple-3',
     description: 'Color Deep Purple 128GB',
     descriptionLong: '',
     price: 1800.862,
@@ -100,6 +108,7 @@ export const PRODUCT_LIST_01: Product[] = [
   {
     id: 9,
     name: 'iPhone 14 Pro Max',
+    slug: 'iphone-14-pro-max-purple-4',
     description: 'Color Deep Purple 128GB',
     descriptionLong: '',
     price: 1800.862,
@@ -111,6 +120,7 @@ export const PRODUCT_LIST_01: Product[] = [
   {
     id: 10,
     name: 'iPhone 14 Pro Max',
+    slug: 'iphone-14-pro-max-purple-5',
     description: 'Color Deep Purple 128GB',
     descriptionLong: '',
     price: 1800.862,
@@ -125,6 +135,7 @@ export const PRODUCT_LIST_02: Product[] = [
   {
     id: 7,
     name: 'Apple MacBook Air 13”',
+    slug: 'apple-macbook-air-13',
     description: 'Chip M1 CPU 8GB RAM',
     descriptionLong: '',
     price: 1139.99,
@@ -136,6 +147,7 @@ export const PRODUCT_LIST_02: Product[] = [
   {
     id: 8,
     name: 'Apple iPad 10.2”',
+    slug: 'apple-ipad-10-2',
     description: '9ªGen WiFi 64 GB Color Silver',
     descriptionLong: '',
     price: 419.99,
@@ -147,6 +159,7 @@ export const PRODUCT_LIST_02: Product[] = [
   {
     id: 9,
     name: 'HP Gamer Victus',
+    slug: 'hp-gamer-victus',
     description: '16-D0500LA Intel Core i5',
     descriptionLong: '',
     price: 699.99,
@@ -158,6 +171,7 @@ export const PRODUCT_LIST_02: Product[] = [
   {
     id: 10,
     name: 'Lenovo Ideapad 1',
+    slug: 'lenovo-ideapad-1',
     description: 'Intel Celeron 4GB RAM',
     descriptionLong: '',
     price: 299.99,
@@ -169,6 +183,7 @@ export const PRODUCT_LIST_02: Product[] = [
   {
     id: 11,
     name: 'Lenovo Convertible Flex1',
+    slug: 'lenovo-convertible-flex-1',
     description: '5i Intel Core I3 8GB RAM',
     descriptionLong: '',
     price: 497.09,
@@ -180,6 +195,7 @@ export const PRODUCT_LIST_02: Product[] = [
   {
     id: 12,
     name: 'ASUS Laptop 15,6”',
+    slug: 'asus-laptop-15-6',
     description: 'Intel Core i3 12GB RAM',
     descriptionLong: '',
     price: 1449.862,
@@ -194,6 +210,7 @@ export const PRODUCT_LIST_03: Product[] = [
   {
     id: 13,
     name: 'Lavadora FENSA 21kg',
+    slug: 'lavadora-fesa-21kg',
     description: 'Premium Care Pro 21 X Silver',
     descriptionLong: '',
     price: 449.99,
@@ -205,6 +222,7 @@ export const PRODUCT_LIST_03: Product[] = [
   {
     id: 14,
     name: 'Lavadora LG 12kg',
+    slug: 'lavadora-lg-12kg',
     description: 'Carga frontal',
     descriptionLong: '',
     price: 499.99,
@@ -216,6 +234,7 @@ export const PRODUCT_LIST_03: Product[] = [
   {
     id: 15,
     name: 'Side by Side LG 598',
+    slug: 'side-by-side-lg-598',
     description: 'LS66SXTC InstaView Craft',
     descriptionLong: '',
     price: 1889.99,
@@ -227,6 +246,7 @@ export const PRODUCT_LIST_03: Product[] = [
   {
     id: 16,
     name: 'Refrigerador Samsung',
+    slug: 'refrigerador-samsung',
     description: 'No Frost 234 lt Top Mount',
     descriptionLong: '',
     price: 509.99,
@@ -238,6 +258,7 @@ export const PRODUCT_LIST_03: Product[] = [
   {
     id: 17,
     name: 'Microondas 25lt Wurden',
+    slug: 'microondas-25lt-wurden',
     description: 'WMW-WONDER25',
     descriptionLong: '',
     price: 69.99,
@@ -249,6 +270,7 @@ export const PRODUCT_LIST_03: Product[] = [
   {
     id: 18,
     name: 'Microondas 20 lt Galanz',
+    slug: 'microondas-20lg-galanz',
     description: 'GLC0ZV20S5SB071',
     descriptionLong: '',
     price: 34.99,

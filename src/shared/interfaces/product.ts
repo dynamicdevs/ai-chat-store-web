@@ -2,6 +2,7 @@ import { type ProductType } from '@/enums';
 
 export interface Product {
   id: number;
+  slug: string;
   name: string;
   description: string;
   descriptionLong: string;

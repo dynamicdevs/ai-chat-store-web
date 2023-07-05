@@ -1,8 +1,25 @@
 import { RoleMessage } from '@/enums';
 import { type Message } from '@/interfaces';
+import { validJson } from '@/utils';
 
 type Props = {
   message: Message;
+};
+
+const getMessage = (message: string) => {
+  const separators = ['\\[', '\\]'];
+  const list = message
+    .split(new RegExp(separators.join('|'), 'g'))
+    .filter(_ => _)
+    .map(_ => {
+      if (validJson(_)) {
+        const object = JSON.parse(_);
+        return `<a href=${object?.key} target="_blank" class="link">${object?.name}</a>`;
+      }
+      return _;
+    });
+  const breakWords = list.map(_ => _.replaceAll('\n\n', '<br>'));
+  return breakWords.join('');
 };
 
 export const MessageBubble = ({ message }: Props) => {
@@ -13,8 +30,7 @@ export const MessageBubble = ({ message }: Props) => {
           ? 'bg-core-default-inverted p-4 text-core-default-content mr-auto after:-left-3 after:border-b-core-default-inverted after:rotate-[270deg]'
           : 'bg-core-interactive-100 p-[10px] text-core-default-inverted ml-auto after:-right-3 after:border-b-core-interactive-100 after:rotate-90 '
       }`}
-    >
-      {message.content}
-    </div>
+      dangerouslySetInnerHTML={{ __html: getMessage(message.content) }}
+    ></div>
   );
 };
